@@ -30,7 +30,7 @@ else
     if (horas === 12) {
         reloj.innerHTML = `<b>${horas}:${minutos}:${segundos} PM</b>`;  // Si son las 12, mostrar 12 PM
     } else if (horas > 12) {
-        reloj.innerHTML = `<b>${horas - 12}:${minutos}:${segundos} PM</b>`; // Para horas 13 y mayores, restamos 12
+        reloj.innerHTML = `<b>${(horas - 12).toString().padStart(2,"0")}:${minutos}:${segundos} PM</b>`; // Para horas 13 y mayores, restamos 12
     } else {
         reloj.innerHTML = `<b>${horas}:${minutos}:${segundos} AM</b>`;  // Para la mañana, solo mostrar las horas
     }
